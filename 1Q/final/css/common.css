@@ -1,0 +1,131 @@
+h1,h2,p,button,option{
+	font-family: "ab-kirigirisu", sans-serif;
+	/* font-weight: 400;
+	font-style: normal; */
+}
+p{
+	font-size: 40px;
+	width: 50%;
+	text-align: center;
+}
+h1{
+	font-size: 175px;
+}
+h2{
+	font-size: 75px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.invalid {
+	border: 1px solid red;
+}
+
+div{
+	display: flex;
+	position: relative;
+	width: 50%;
+	height: 90px;
+	margin: auto;
+	justify-content: space-between;
+}
+div.title{
+	display: block;
+	width: 65%;
+	height: auto;
+	margin: auto;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+
+div.errormess{
+	display: block;
+	position: absolute;
+	margin-top: 30px;
+	width: 25%;
+	height: 540px;
+	top: 300px;
+	left: 75%;
+}
+div.errormess > div{
+	width: 100%;
+	color: red;
+	text-align: center;
+	display: flex;  /* フレックスボックスを使用 */
+	align-items: center;  /* エラーメッセージを垂直方向に中央に配置 */
+	justify-content: center;
+}
+div.err-radio {
+	height: 180px;
+}
+
+
+div.enter{
+	margin-top: 30px;
+}
+div.enter p{
+	line-height: 90px;
+}
+
+div.inq p{
+	line-height: 90px;
+}
+.radiobtn{
+	width: 30px;
+	height: 30px;
+}
+label.radio{
+	margin: auto;
+}
+
+select{
+	width: auto;
+	margin: auto;
+	height: 30px;
+}
+div.grade p{
+	line-height: 90px;
+}
+div.faculty p{
+	line-height: 90px;
+}
+
+.textb {
+	width: 45%;
+	height: 30px;
+	margin: auto;
+}
+div.name p{
+	line-height: 90px;
+}
+div.mail p{
+	line-height: 90px;
+}
+div.content{
+	display: block;
+	height: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+div.content p{
+	margin: auto;
+}
+div.content textarea{
+	width: 80%;
+	height: 100px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+div.send{
+	display: block;
+	height: 50px;
+	margin-top: 30px;
+	text-align: center;
+}
+div.send button{
+	font-size: 30px;
+	width: auto;
+	height: 40px;
+	margin: auto;
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./common.css">
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="./three.min.js"></script>
+	<script src="./three-noise.js"></script>
+</head>
+<body>
+	<canvas id="mycanvas"></canvas>
+	<div id="swiper-container">
+		<div class="container">
+			<div class="swiper swiper-1">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination swiper-pagination-1"></div>
+				
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev swiper-button-prev-1"></div>
+				<div class="swiper-button-next swiper-button-next-1"></div>
+				
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar swiper-scrollbar-1"></div>
+			</div>
+			<div id="swiper-title-1" class="swiper-title"></div>
+		</div>
+		
+		<div class="container">
+			<div class="swiper swiper-2">
+				<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div>
+						<img src="./img/sweets_ruby_chocolate.png" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div>
+						<img src="./img/sweets_chocolate_milk.png" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div>
+						<img src="./img/sweets_chocolate_white.png" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div>
+						<img src="./img/sweets_chocolate_dark.png" alt="">
+					</div>
+				</div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-2"></div>
+		
+				<div class="swiper-button-prev swiper-button-prev-2"></div>
+				<div class="swiper-button-next swiper-button-next-2"></div>
+		
+				<div class="swiper-scrollbar swiper-scrollbar-2"></div>
+			</div>
+			<div id="swiper-title-2" class="swiper-title"></div>
+		</div>
+	</div>
+
+	
+	<form id="basic_form">
+		<div>
+			<input id="basic_name" type="text" placeholder="名前を入力してください" />
+		</div>
+		<div>
+			<input id="basic_email" type="text" placeholder="メールアドレスを入力してください" />
+		</div>
+		<div>
+			<input id="basic_password" type="text" placeholder="パスワードを入力してください" />
+		</div>
+		<div>
+			<input id="basic_age" type="text" placeholder="年齢を入力してください" />
+		</div>
+		<div>
+			<input id="basic_address" type="text" placeholder="住所を入力してください" />
+		</div>
+		<button type="submit">送信</button>
+	</form>
+	<script src="./main.js"></script>
+	<script src="./app.js"></script>
+    	<script>
+      	console.log('test');
+    	</script>
+</body>
+</html>
+

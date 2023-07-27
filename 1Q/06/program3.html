@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div>keydown:
+        <span id="keydown-text"></span>
+    </div>
+    <div>keyup:
+        <span id="keyup-text"></span>
+    </div>
+    <script>
+        let keyDownText = document.getElementById("keydown-text");
+        let keyUpText = document.getElementById("keyup-text");
+        function onKeyDown(event) {
+            keyDownText.textContent = event.key;
+		let x = window.alert("Enterキーが押されました")
+        }
+        function onKeyUp() {
+            keyUpText.textContent = event.key;
+        }
+        document.onkeydown = onKeyDown;
+        document.onkeyup = onKeyUp;
+    </script>
+</body>
+
+</html>

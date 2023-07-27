@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root, body {
+            height: 100%;
+            margin: 0px;
+        }
+        #container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+        #header {
+            height: 80px;
+            background-color: lightblue;
+        }
+        #content {
+            flex-grow: 1;
+        }
+        #footer {
+            height: 80px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+    </div> 
+    <script>
+	let body = document.getElementById("content");
+	let inputElement = document.createElement("ul");
+	body.appendChild(inputElement);
+	for(let i=0;i<3;i++){
+		let liElement = document.createElement("li");
+		if(i == 0){
+			liElement.appendChild(document.createTextNode("one"));
+		} else if(i == 1){
+			liElement.appendChild(document.createTextNode("two"));
+		} else if(i == 2){
+			liElement.appendChild(document.createTextNode("three"));
+		}
+		inputElement.appendChild(liElement);	
+	}
+	// body.appendChild(text);
+    </script>
+</body>
+
+</html>

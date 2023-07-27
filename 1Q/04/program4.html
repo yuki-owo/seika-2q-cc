@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root, body {
+            height: 100%;
+            margin: 0px;
+        }
+        #container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+        #header {
+            height: 80px;
+            background-color: lightblue;
+        }
+        #content {
+            flex-grow: 1;
+        }
+        #footer {
+            height: 80px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+    </div> 
+    <script>
+	let text = document.createTextNode("JavaScriptから作成");
+	let body = document.getElementById("content");
+	body.appendChild(text);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .bold {
+          font-weight: bold;
+        }
+        .italic {
+          font-style: italic;
+        }
+        .serif {
+          font-family: serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="style-container">
+        <label>
+          太字
+          <input type="checkbox" onchange="changeBold()"></input>
+        </label>
+        <label>
+          イタリック
+          <input type="checkbox" onchange="changeItalic()"></input>
+        </label>
+        <label>
+          serif
+          <input type="checkbox" onchange="changeSerif()"></input>
+        </label>
+      </div>
+      <textarea id="textarea" class="">lorem ipsum</textarea>
+    </div>
+    <script>
+      let textarea = document.getElementById("textarea");
+      function changeBold() {
+        if(textarea.classList.length != 0){
+		let target = textarea.classList.value;
+		textarea.classList.remove(target);
+		textarea.classList.add("bold");
+	  } else {
+		textarea.classList.add("bold");
+	  }
+      }
+      function changeItalic() {
+        if(textarea.classList.length != 0){
+		let target = textarea.classList.value;
+		textarea.classList.remove(target);
+		textarea.classList.add("italic");
+	  } else {
+		textarea.classList.add("italic");
+	  }
+      }
+      function changeSerif() {
+	if(textarea.classList.length != 0){
+		let target = textarea.classList.value;
+		textarea.classList.remove(target);
+		textarea.classList.add("serif");
+	  } else {
+		textarea.classList.add("serif");
+	  }
+      }
+    </script>
+</body>
+
+</html>

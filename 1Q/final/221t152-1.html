@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>電子工作部問い合わせフォーム</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common-1.css">
+	<script>
+		(function(d) {
+		var config = {kitId: 'eqt8zts',scriptTimeout: 3000,async: true},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="title">
+			<h1 id="title">電子工作部</h1>
+			<h2 id="subTitle">問い合わせフォーム</h2>
+		</div>
+		<div class="enter">
+			<p id="enterLabel">入部きぼう</p>
+			<label class="radio"><input type="radio" id="enterRadio" name="radio" value="enter" class="radiobtn"></label>
+		</div>
+		<div class="inq">
+			<p id="inqLabel">問い合わせ</p>
+			<label class="radio"><input type="radio" id="inqRadio" name="radio" value="inq" class="radiobtn"></label>
+		</div>
+		<div class="grade">
+			<p>学年</p>
+			<select name="学年" id="grade">
+				<option value="">学年を選んでください</option>
+				<option value="1">1年</option>
+				<option value="2">2年</option>
+				<option value="3">3年</option>
+				<option value="4">4年</option>
+			</select>
+		</div>
+		<div class="faculty">
+			<p>所属学部</p>
+			<select name="学部" id="faculty" >
+				<option value="">学部を選んでください</option>
+				<option value="culture">国際文化</option>
+				<option value="media">メディア表現</option>
+				<option value="art">芸術</option>
+				<option value="design">デザイン</option>
+				<option value="manga">マンガ</option>
+			</select>
+		</div>
+		<div class="name">
+			<p>お名前</p>
+			<input type="text" id="name" class="textb">
+		</div>
+		<div class="mail">
+			<p>メールアドレス</p>
+			<input type="text" id="mail" class="textb">
+		</div>
+		<div class="content">
+			<p>問い合わせ内容<br>  /聞きたいこと</p>
+			<textarea id="content"></textarea>
+		</div>
+		<div class="send">
+			<button id="sendBtn">送信</button>
+		</div>
+	</div>	
+	<script>
+	document.getElementById('sendBtn').addEventListener('click', function() {
+		let formArray = [];
+		
+		let enterRadio = document.getElementById('enterRadio');
+		let inqRadio = document.getElementById('inqRadio');
+		let radioValue = enterRadio.checked ? enterRadio.value : inqRadio.checked ? inqRadio.value : '';
+		
+		formArray.push({
+			'type': radioValue,
+			'grade': document.getElementById('grade').value,
+			'faculty': document.getElementById('faculty').value,
+			'name': document.getElementById('name').value,
+			'mail': document.getElementById('mail').value,
+			'content': document.getElementById('content').value
+		});
+
+		console.log(formArray);
+	});
+
+	</script>
+</body>
+
+</html>

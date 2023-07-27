@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #item {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="item" onmouseenter="onMouseEnter()" onmouseleave="onMouseLeave()"></div>
+    <script>
+        let item = document.getElementById("item");
+        function onMouseEnter() {
+            console.log("mouse enter");
+		item.textContent = "カーソルが入っています";
+        }
+        function onMouseLeave() {
+            console.log("mouse leave");
+		item.textContent = "";
+        }
+    </script>
+</body>
+
+</html>

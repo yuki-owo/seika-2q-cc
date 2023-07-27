@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .container {
+      width: 400px;
+      height: 300px;
+      background-color: lightgray;
+      margin: 10px;
+      padding: 10px;
+    }
+    #item {
+      width: 100px;
+      height: 100px;
+      background-color:black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container1" class="container">
+    <div id="item">item</div>
+  </div>
+  <div id="container2" class="container">
+  </div>
+  <button onclick="moveItem()">移動</button>
+  <script>
+    function moveItem() {
+      let target = document.getElementById("item");
+	let parent = target.parentElement;
+	let container = document.getElementsByClassName("container");
+	for(i=0;i<2;i++){
+		if (container[i] != parent){
+			container[i].appendChild(target);
+		}
+	}
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+      .dialog-base {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        box-sizing: border-box;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .dialog {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;;
+      }
+    </style>
+</head>
+
+<body>
+  <button onclick="op()">ダイアログ表示</button>
+  <div class="dialog-base" hidden>
+    <div class="dialog">
+      <p>ダイアログ表示テスト</p>
+      <button onclick="cl()">閉じる</button>
+    </div>
+  </div>
+  <script>
+    function op() {
+      let dialogb = document.getElementsByClassName("dialog-base")[0];
+	dialogb.removeAttribute("hidden");
+    }
+    function cl() {
+      let dialogb = document.getElementsByClassName("dialog-base")[0];
+	dialogb.setAttribute("hidden", "true")
+    }
+  </script>
+</body>
+
+</html>

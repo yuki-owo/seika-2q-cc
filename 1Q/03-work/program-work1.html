@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+	let list = [];
+	function addcontent(){
+		let x = window.prompt("項目を追加");
+		list.push("・" + x);
+	}
+	function deletecontent(){
+		let x = window.prompt("項目の削除");
+		x = parseFloat(x + 1);
+		list.splice(x,1);
+	}
+	function printlist(){
+		console.log(list.join("\n"));
+	}
+    </script>
+</head>
+
+<body>
+    <button onclick="addcontent()">項目を追加</button>
+    <button onclick="deletecontent()">項目の削除</button>
+    <button onclick="printlist()">プリント</button>
+</body>
+
+</html>

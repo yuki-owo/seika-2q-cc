@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .input-container {
+            display: flex;
+            margin: 1rem 0rem;
+            gap: 0.5rem;
+        }
+        #input-area {
+            flex-grow: 1;
+            padding: 0.5rem;
+        }
+        #container {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border: solid 4px gray;
+        }
+        .item {
+            list-style-type: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-container">
+        <input id="input-area"></input>
+        <button id="add-button">項目を追加</button>
+        <button id="remove-button" onclick="removeLastItem()">最後の項目を削除</button>
+    </div>
+    <ul id="container">
+        <li class="item">項目1</li>
+        <li class="item">項目2</li>
+        <li class="item">項目3</li>
+    </ul>
+    <script>
+	let button = document.getElementById("remove-button");
+	function removeLastItem(){
+		let parent = document.getElementById("container");
+		let target = parent.lastElementChild;
+		target.remove();
+	}
+    </script>
+</body>
+
+</html>

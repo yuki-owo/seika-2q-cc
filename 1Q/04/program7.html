@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .input-container {
+            display: flex;
+            margin: 1rem 0rem;
+        }
+        #input-area {
+            flex-grow: 1;
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+        }
+        .items {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border: solid 4px gray;
+        }
+        .item {
+            list-style-type: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-container">
+        <button id="add-button">項目を追加</button>
+        <button id="remove-button" onclick="removeItem()">最後の項目を削除</button>
+    </div>
+    <ul class="items">
+        <li class="item">項目1</li>
+        <li class="item">項目2</li>
+        <li class="item">項目3</li>
+    </ul>
+    <script>
+	let button = document.getElementById("remove-button");
+	let target = document.getElementsByClassName("item");
+	function removeItem(){
+		target[target.length - 1].remove();
+		if(target.length == 0){
+		button.setAttribute("disabled", true);
+	}
+	}
+    </script>
+</body>
+
+</html>

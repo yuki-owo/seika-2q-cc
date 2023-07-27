@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+	function getDescription(){
+			return "タイトル:"+this.title+"、著者:"+this.author
+		}
+	let book = {
+		title : "こころ",
+		author : "夏目漱石",
+		getDescription
+	};
+	let description = book.getDescription();
+	console.log(description); // タイトル：こころ、著者：夏目漱石 
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

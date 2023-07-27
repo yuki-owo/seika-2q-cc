@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>電子工作部問い合わせフォーム</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<script>
+		(function(d) {
+		var config = {kitId: 'eqt8zts',scriptTimeout: 3000,async: true},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+
+<body>
+	<div class="title">
+		<h1>電子工作部</h1>
+		<h2>問い合わせフォーム</h2>
+	</div>
+	<div class="errormess">
+		<div id="err-radio" class="err-radio"></div>
+		<div id="err-grade"></div>
+		<div id="err-faculty"></div>
+		<div id="err-name"></div>
+		<div id="err-mail"></div>
+	</div>
+	<div class="enter">
+		<p>入部きぼう</p>
+		<label class="radio"><input id="enterRadio" type="radio" name="radio" value="enter" class="radiobtn"></label>
+	</div>
+	<div class="inq">
+		<p>問い合わせ</p>
+		<label class="radio"><input id="inqRadio" type="radio" name="radio" value="inq" class="radiobtn"></label>
+	</div>
+	<div class="grade">
+		<p>学年</p>
+		<select name="学年" id="grade" required>
+			<option value="">学年を選んでください</option>
+			<option value="1">1年</option>
+			<option value="2">2年</option>
+			<option value="3">3年</option>
+			<option value="4">4年</option>
+		</select>
+	</div>
+	<div class="faculty">
+		<p>所属学部</p>
+		<select name="学部" id="faculty" required>
+			<option value="">学部を選んでください</option>
+			<option value="culture">国際文化</option>
+			<option value="media">メディア表現</option>
+			<option value="art">芸術</option>
+			<option value="design">デザイン</option>
+			<option value="manga">マンガ</option>
+		</select>
+	</div>
+	<div class="name">
+		<p>お名前</p>
+		<input type="text" name="name" id="name" class="textb" required>
+	</div>
+	<div class="mail">
+		<p>メールアドレス</p>
+		<input type="email" name="email" id="email" class="textb" required>
+	</div>
+	<div class="content">
+		<p>問い合わせ内容<br>  /聞きたいこと</p>
+		<textarea name="content" id="content"></textarea>
+	</div>
+	<div class="send">
+		<button id="sendBtn">送信</button>
+	</div>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

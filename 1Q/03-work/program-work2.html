@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        function calculation(){
+		let vleft = document.getElementById("left").value;
+		vleft = parseFloat(vleft);
+		let vright = document.getElementById("right").value;
+		vright = parseFloat(vright);
+		let res = document.getElementById("result").value;
+		res = parseFloat(res);
+		res = vleft + vright;
+		document.getElementById("result").value = res;
+	  }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <input id="left" value="4" />
+        +
+        <input id="right" value="2" />
+        =
+        <input id="result" value="" />
+    </div>
+    <button onclick="calculation()">計算</button>
+</body>
+
+</html>

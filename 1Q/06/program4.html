@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <select onchange="onChange(event)">
+        <option>dog</option>
+        <option>cat</option>
+        <option>bird</option>
+    </select>
+    <div>
+        selected:
+        <span id="selected-text"></span>
+    </div>
+
+    <script>
+        let selected = document.getElementById("selected-text");
+        function onChange(event) {
+            selected.textContent = event.currentTarget.value;
+		if (event.currentTarget.value == "cat"){
+			selected.style.color = "red";
+		}else{
+			selected.style.color = "black";
+		}
+        }
+    </script>
+</body>
+
+</html>
